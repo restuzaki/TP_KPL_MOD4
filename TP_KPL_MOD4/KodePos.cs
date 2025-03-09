@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-class KodePos
+namespace tpmodul4_103022300029
 {
-    private static Dictionary<string, string> tabelKodePos = new Dictionary<string, string>
+    class KodePos
+    {
+        private static Dictionary<string, string> tabelKodePos = new Dictionary<string, string>
     {
         {"Batununggal", "40266"},
         {"Kujangsari", "40287"},
@@ -18,8 +20,9 @@ class KodePos
         {"Samoja", "40273"}
     };
 
-    public static string GetKodePos(string kelurahan)
-    {
-        return tabelKodePos.ContainsKey(kelurahan) ? tabelKodePos[kelurahan] : "Kode pos tidak ditemukan.";
+        public static string GetKodePos(string kelurahan)
+        {
+            return tabelKodePos.ContainsKey(kelurahan) ? tabelKodePos[kelurahan] : "Kode pos tidak ditemukan.";
+        }
     }
 }
