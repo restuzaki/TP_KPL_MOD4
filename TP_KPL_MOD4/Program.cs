@@ -1,25 +1,14 @@
 ﻿using System;
-using System.Collections.Generic; 
 
-class KodePos
+
+class MainKodePos
 {
-    private static Dictionary<string, string> tabelKodePos = new Dictionary<string, string>
+    static void Main()
     {
-        {"Batununggal", "40266"},
-        {"Kujangsari", "40287"},
-        {"Mengger", "40267"},
-        {"Wates", "40256"},
-        {"Cijaura", "40287"},
-        {"Jatisari", "40286"},
-        {"Margasari", "40286"},
-        {"Sekejati", "40286"},
-        {"Kebonwaru", "40272"},
-        {"Maleer", "40274"},
-        {"Samoja", "40273"}
-    };
+        Console.Write("Masukkan nama kelurahan: ");
+        string kelurahan = Console.ReadLine();
+        Console.WriteLine($"Kode Pos {kelurahan}: {KodePos.GetKodePos(kelurahan)}");
 
-    public static string GetKodePos(string kelurahan)
-    {
-        return tabelKodePos.ContainsKey(kelurahan) ? tabelKodePos[kelurahan] : "Kode pos tidak ditemukan.";
+        Console.WriteLine("\n---\n");
     }
 }
